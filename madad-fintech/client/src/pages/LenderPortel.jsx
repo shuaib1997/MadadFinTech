@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import LenderCalculator from '../components/LenderCalculator';
 
 export default function LenderPortal() {
   const [programForm, setProgramForm] = useState({
