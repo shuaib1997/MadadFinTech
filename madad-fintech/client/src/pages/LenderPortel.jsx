@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import LenderCalculator from '../components/LenderCalculator';
 
 export default function LenderPortal() {
   const [programForm, setProgramForm] = useState({
@@ -17,7 +16,7 @@ export default function LenderPortal() {
   const handleProgramSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/lenders', programForm);
+      await axios.post('http://localhost:5000/api/lender', programForm);
       setSuccessMessage('Lender program created successfully!');
       setErrorMessage('');
       // Reset form
